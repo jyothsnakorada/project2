@@ -1,4 +1,5 @@
 /**
+ /**
  * Angular module
  */
 var app=angular.module("app",['ngRoute','ngCookies'])
@@ -17,7 +18,8 @@ app.config(function($routeProvider){
 		controller:'UserController'
 	})
 	.when('/home',{
-		templateUrl:'views/home.html'
+		templateUrl:'views/home.html',
+		controller:'NotificationController'
 	})
 	.when('/addjob',{
 		templateUrl:'views/jobform.html',
@@ -47,6 +49,39 @@ app.config(function($routeProvider){
 	.when('/getblog/:id',{
 		templateUrl:'views/blogpostdetail.html',
 		controller:'BlogPostDetailController'
+	})
+	
+	.when('/getapprovalform/:id',{
+		templateUrl:'views/approvalform.html',
+		controller:'BlogPostDetailController'
+	})
+	.when('/getnotification/:id',{
+		templateUrl:'views/notificationdetails.html',
+		controller:'NotificationController'
+	})
+	.when('/uploadprofilepic',{
+		templateUrl:'views/uploadprofilepic.html'
+	})
+	.when('/suggestedusers',{
+		templateUrl:'views/suggestedusers.html',
+		controller:'FriendController'
+	})
+
+	
+	.when('/pendingrequests',{
+		templateUrl:'views/pendingrequests.html',
+		controller:'FriendController'
+	})
+	
+	
+	.when('/friends',{
+		templateUrl:'views/friendlist.html',
+		controller:'FriendController'
+	})
+
+	.when('/chat',{
+		templateUrl:'views/chat.html',
+		controller:'ChatController'
 	})
 
 	

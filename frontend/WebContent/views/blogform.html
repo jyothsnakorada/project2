@@ -12,6 +12,13 @@
 <label>Blog Title</label>
 <input type="text" ng-model="blog.blogTitle" class="form-control">
 </div>
+<div class="container">
+<span style="color:red">{{error.message}}</span>
+<form>
+<div class="form-group">
+<label>Blog Title</label>
+<input type="text" ng-model="blog.blogTitle" class="form-control">
+</div>
 <div class="form-group">
 <label>Content</label>
 <textarea rows="4" cols="15" ng-model="blog.blogContent" class="form-control"></textarea>
@@ -31,6 +38,5 @@
 <input type="submit" ng-click="addBlog(blog)" value="Add Blog">
 </form>
 </div>
-
 </body>
 </html>
